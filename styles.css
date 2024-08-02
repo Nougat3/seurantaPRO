@@ -3,7 +3,6 @@ body {
     background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    font-size: 1.2em; /* 20% isompi fonttikoko */
 }
 
 .container {
@@ -17,7 +16,6 @@ body {
 h1, h2 {
     text-align: center;
     color: #333;
-    font-size: 1.2em; /* 20% isompi fonttikoko */
 }
 
 .form-group {
@@ -71,16 +69,6 @@ button:hover {
     border-radius: 4px;
 }
 
-.measurement-row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.measurement {
-    width: 48%;
-}
-
 @media (max-width: 600px) {
     .container {
         padding: 10px;
@@ -92,9 +80,5 @@ button:hover {
 
     button {
         padding: 8px;
-    }
-
-    .measurement {
-        width: 100%;
     }
 }

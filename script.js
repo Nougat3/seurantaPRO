@@ -104,7 +104,7 @@ function createMeasurementInputs() {
     measurementsDiv.innerHTML = '';
 
     for (let day = 1; day <= 4; day++) {
-        measurementsDiv.innerHTML += `<h3>Päivä ${day}</h3><div class="measurement-row">`;
+        measurementsDiv.innerHTML += `<h3>Päivä ${day}</h3>`;
         for (let time = 1; time <= 2; time++) {
             const timeOfDay = time === 1 ? 'Aamu' : 'Ilta';
             measurementsDiv.innerHTML += `
@@ -120,19 +120,18 @@ function createMeasurementInputs() {
                 </div>
             `;
         }
-        measurementsDiv.innerHTML += `</div>`;
     }
 }
 
-function copySummary() {
+function printSummary() {
     const resultsDiv = document.getElementById('results');
-    const range = document.createRange();
-    range.selectNode(resultsDiv);
-    window.getSelection().removeAllRanges();
-    window.getSelection().addRange(range);
-    document.execCommand('copy');
-    window.getSelection().removeAllRanges();
-    alert('Yhteenveto kopioitu leikepöydälle');
+    const printWindow = window.open('', '', 'height=400,width=600');
+    printWindow.document.write('<html><head><title>Yhteenveto</title>');
+    printWindow.document.write('</head><body>');
+    printWindow.document.write(resultsDiv.innerHTML);
+    printWindow.document.write('</body></html>');
+    printWindow.document.close();
+    printWindow.print();
 }
 
 createMeasurementInputs();
