@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    font-size: 1.2em; /* 20% isompi fonttikoko */
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    text-align: center;
+    color: #333;
+    font-size: 1.2em; /* 20% isompi fonttikoko */
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+input, select {
+    width: 80%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #5cb85c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #4cae4c;
+}
+
+#results {
+    margin-top: 20px;
+    padding: 10px;
+    background: #e9e9e9;
+}
+
+#results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#results li {
+    background: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.measurement-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.measurement {
+    width: 48%;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    input, select {
+        width: 100%;
+    }
+
+    button {
+        padding: 8px;
+    }
+
+    .measurement {
+        width: 100%;
+    }
+}

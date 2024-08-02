@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verenpainelääkityksen Optimointi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Verenpainelääkityksen Optimointi</h1>
+        <form id="patient-form">
+            <h2>Potilaan tiedot</h2>
+            <div class="form-group">
+                <label for="finnrisk">FinnRiski:</label>
+                <select id="finnrisk" name="finnrisk" required>
+                    <option value="0_to_1">0-1%</option>
+                    <option value="2_to_9.9">2-9.9%</option>
+                    <option value="10_to_14.9">10-14.9%</option>
+                    <option value="15_and_above">Yli 15%</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="diabetes">Diabetes:</label>
+                <select id="diabetes" name="diabetes" required>
+                    <option value="no">Ei</option>
+                    <option value="yes">Kyllä</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="egfr">eGFR:</label>
+                <select id="egfr" name="egfr" required>
+                    <option value="above_60">Yli 60 ml/min/1.73 m²</option>
+                    <option value="30_to_59">30-59 ml/min/1.73 m²</option>
+                    <option value="below_30">Alle 30 ml/min/1.73 m²</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="alb-krea">U-Alb/Krea-suhde > 30 mg/mmol:</label>
+                <select id="alb-krea" name="alb-krea" required>
+                    <option value="no">Ei</option>
+                    <option value="yes">Kyllä</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ldl">Nykyinen LDL arvo (mmol/l):</label>
+                <input type="number" step="0.1" id="ldl" name="ldl" required>
+            </div>
+            <div class="form-group">
+                <label for="artery-disease">Sepelvaltimotauti:</label>
+                <select id="artery-disease" name="artery-disease" required>
+                    <option value="no">Ei</option>
+                    <option value="yes">Kyllä</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="cardio-event">Aiempi sydän-/aivoinfarkti:</label>
+                <select id="cardio-event" name="cardio-event" required>
+                    <option value="no">Ei</option>
+                    <option value="yes">Kyllä</option>
+                </select>
+            </div>
+
+            <h2>Verenpainemittaukset (4 vrk)</h2>
+            <div id="measurements">
+                <!-- Mittaustietojen syöttökentät -->
+            </div>
+
+            <button type="submit">Laske keskiarvot ja tavoite</button>
+        </form>
+        <div id="results"></div>
+        <button id="copy-summary" onclick="copySummary()">Kopioi yhteenveto</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
